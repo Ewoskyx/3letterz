@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --lhBlue: #1d225a;
+    --lhYellow: #ffb408;
+    --myBlue: #0099ff;
+    --myOrange: #ff9900;
+    --myGreen: #00cc66;
+    --myPink: #ff66cc;
+  }
+  
+  body {
+    background: linear-gradient(to bottom right, #f2f2f2, #f9f9f9);
+    color: #000;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .inputGrp {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  
+  .inputGrp input[type="search"] {
+    width: calc(24% - 12px);
+  }
+  
+
+  input[type="search"] {
+    border: solid 3px;
+    outline-color: #333 !important;
+    border-radius: 12px;
+    font-size: 1em;
+    height: 2em;
+    padding: 16px;
+    transition: all 1s ease-in;
+    z-index: 1;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .inputGrp input[type="search"] {
+      width: calc(33.33% - 12px);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .inputGrp input[type="search"] {
+      width: calc(50% - 12px);
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .inputGrp input[type="search"] {
+      width: calc(100% - 12px);
+    }
+  }
+  
+  input#inputCode {
+    border-color: var(--myBlue);
+  }
+  
+  input#inputCity {
+    border-color: var(--myOrange);
+  }
+  
+  input#inputAirport {
+    border-color: var(--myGreen);
+  }
+  
+  input#inputCountry {
+    border-color: var(--myPink);
+  }
+  
+  .display {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  
+  .container {
+    position: relative;
+    border-radius: 10px;
+    padding: 16px;
+    width: calc(25% - 24px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .container p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .container {
+      width: calc(33.33% - 16px);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      width: calc(50% - 12px);
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .container {
+      width: calc(100% - 12px);
+    }
+  }
+  
+  .container:hover {
+    transform: scale(1.03);
+  }
+  
+  .iata b {
+    color: var(--myBlue);
+  }
+  
+  .city b {
+    color: var(--myOrange);
+  }
+  
+  .country b {
+    color: var(--myPink);
+  }
+  
+  .airport b {
+    color: var(--myGreen);
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    height: 80%;
+    max-height: 600px;
+    overflow: hidden;
+  }
+  
+  #map {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Tooltip stilleri */
+  .leaflet-tooltip {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--lhYellow) !important;
+    color: #1d225a !important;
+    padding: 3px;
+    border: 1px dashed #000000 !important;
+    border-radius: 4px !important;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2)) !important;
+    font-size: 20px;
+    width: auto;
+    height: auto;
+    transition: 0.2s all ease-in-out;
+  }
+  
+  hr {
+    border-color: #333;
+    border-width: 2px;
+  }
+  
